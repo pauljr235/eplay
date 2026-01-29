@@ -1,6 +1,9 @@
 import { useParams } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
+import Gallery from '../../components/Gallery'
+
+
 
 const Product = () => {
   const { id } = useParams()
@@ -17,9 +20,7 @@ const Product = () => {
         <b>Editora:</b> Portkey Games, subsidiária da Warner Bros. Interactive Entertainment <br />
         <b>Idiomas:</b> O jogo oferece suporte a diversos idiomas, incluindo inglês, espanhol, francês, alemão, italiano, português, entre outros. As opções de áudio e legendas podem ser ajustadas nas configurações do jogo.</p>
     </Section>
-    <Section title='Galeria' background='black'>
-        <p>Image</p>
-    </Section>
+    <Gallery/>
     </>
   ) 
 }
