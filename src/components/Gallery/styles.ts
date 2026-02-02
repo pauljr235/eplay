@@ -38,5 +38,45 @@ export const Item = styled.li`
     }
 `
 
+export const Modal = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.73);
+    }
+`
+
+export const ModalItem = styled.div`
+    max-width: 960px;
+    position: relative;
+    z-index: 1;
+
+    header{
+        display: flex;
+        margin-bottom: 24px;
+        justify-content: space-between;
+    }
+
+    h4{
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    img{
+        max-width: 100%;
+    }
+`
+
 
 
