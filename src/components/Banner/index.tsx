@@ -2,8 +2,21 @@ import { Imagem, Titulo, Precos } from './styles'
 import bannerImg from '../../assets/images/banner-homem-aranha.png'
 import Tag from '../Tags'
 import Button from '../Button'
+import { useEffect, useState } from 'react'
+import { Game } from '../../pages/Home'
 
-const Banner = () => (
+const Banner = () =>{
+
+  const [destaque, setDestaque] = useState<Game>()
+
+    useEffect(() => {
+      fetch('https://api-ebac.vercel.app/api/eplay/destaque')
+      .then(res => res.json())
+      .then(resJson => {
+        setDestaque(resJson)
+      })
+    }, [])
+  return(
   <Imagem style={{ backgroundImage: `url(${bannerImg})` }}>
     <div className="container">
       <div>
@@ -24,6 +37,8 @@ const Banner = () => (
       </Button>
     </div>
   </Imagem>
-)
+  )
+}
+
 
 export default Banner
