@@ -30,7 +30,7 @@ const Banner = () =>{
       <Button
         variant='secondary'
         type="link"
-        to="/produto"
+        to={`/product/${destaque?.id}`}
         title="Clique aqui para aproveitar esta oferta"
       >
         Aproveitar

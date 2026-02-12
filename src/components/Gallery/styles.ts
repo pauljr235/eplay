@@ -80,7 +80,7 @@ export const ModalItem = styled.div`
     img,
     iframe{
         max-width: 100%;
-        display: block
+        display: block;
     }
 
     iframe{
